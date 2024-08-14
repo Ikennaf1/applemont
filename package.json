@@ -1,5 +1,5 @@
 {
-  "name": "twenty-twenty-four",
+  "name": "applemont",
   "version": "0.0.1",
   "description": "A theme for the Nidavel Content Management System",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ikennaf1/twenty-twenty-four.git"
+    "url": "git+https://github.com/Ikennaf1/applemont.git"
   },
   "keywords": [
     "theme",
@@ -18,9 +18,9 @@
   "author": "Ikenna Isiogu",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ikennaf1/twenty-twenty-four/issues"
+    "url": "https://github.com/Ikennaf1/applemont/issues"
   },
-  "homepage": "https://github.com/Ikennaf1/twenty-twenty-four#readme",
+  "homepage": "https://github.com/Ikennaf1/applemont#readme",
   "devDependencies": {
     "tailwindcss": "^3.3.3"
   }
