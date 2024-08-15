@@ -12,6 +12,8 @@ exportAssets();
         <link rel="stylesheet" href="{{ homeUrl('/assets/css/style.css') }}">
         <script type="text/javascript" src="{{ homeUrl('/assets/js/script.js') }}" defer></script>
         <title>{{ settings('r', "general.name", "Nidavel") }} | Home</title>
+        {!!customizedStyles()!!}
+        {!! getHead() !!}
     </head>
 
     <body>
@@ -19,11 +21,6 @@ exportAssets();
             {{-- Nav --}}
             <div>
                 @include('front.parts.nav')
-                <div class="header-img">
-                    <img src="{{ homeUrl("/assets/img/pexels--931887.jpg", 0) }}"
-                    style="width: 100%; height: 100%; object-position: center; object-fit: cover;"
-                    alt="Header Image" />
-                </div>
             </div>
 
             <div class="flex flex-col gap-16">
