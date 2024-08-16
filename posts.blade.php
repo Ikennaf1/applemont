@@ -26,7 +26,15 @@ exportAssets();
             <div class="flex flex-col gap-16">
                 {{-- Main section --}}
                 <div class="body-margin">
-                    <div class="flex flex-wrap gap-16 justify-between mt-16">
+                    <div class="flex flex-wrap gap-16 justify-between">
+                        {{-- Header --}}
+                        <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                            <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+                                <div class="flex flex-col mb-16 sm:text-center sm:mb-0">
+                                    khgk
+                                </div>
+                            </div>
+                        </div>
                         {{-- Post content --}}
                         <div class="posts-list">
                             @foreach ($posts as $post)

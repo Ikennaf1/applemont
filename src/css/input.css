@@ -34,7 +34,7 @@ body {
 }
 
 .body-bg {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
 }
 
 .link {
@@ -62,11 +62,11 @@ body {
 }
 
 .menu-item {
-    @apply block py-2 pl-3 pr-4;
+    @apply block py-2 lg:py-0 pl-3 lg:pl-0 pr-4 lg:pr-0 lg:mr-6;
 }
 
 .site-title-container {
-    @apply flex justify-center w-full mx-auto items-center bg-white h-48;
+    @apply flex justify-center w-auto mx-auto items-center bg-white h-48;
 }
 
 .site-title {

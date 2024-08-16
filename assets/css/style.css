@@ -485,6 +485,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 10rem;
 }
 
+.m-2{
+  margin: 0.5rem;
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mt-16{
   margin-top: 4rem;
 }
@@ -493,8 +502,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.25rem;
 }
 
-.mt-4{
-  margin-top: 1rem;
+.mb-16{
+  margin-bottom: 4rem;
 }
 
 .flex{
@@ -509,6 +518,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.h-6{
+  height: 1.5rem;
+}
+
+.h-4{
+  height: 1rem;
+}
+
 .h-32{
   height: 8rem;
 }
@@ -521,16 +538,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
-.h-6{
-  height: 1.5rem;
+.w-6{
+  width: 1.5rem;
+}
+
+.w-4{
+  width: 1rem;
+}
+
+.w-64{
+  width: 16rem;
 }
 
 .w-full{
   width: 100%;
 }
 
-.w-6{
-  width: 1.5rem;
+.max-w-xl{
+  max-width: 36rem;
 }
 
 .flex-col{
@@ -545,6 +570,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.justify-start{
+  justify-content: flex-start;
+}
+
 .justify-center{
   justify-content: center;
 }
@@ -557,16 +586,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 4rem;
 }
 
-.gap-8{
-  gap: 2rem;
+.gap-2{
+  gap: 0.5rem;
 }
 
 .gap-4{
   gap: 1rem;
 }
 
-.gap-2{
-  gap: 0.5rem;
+.gap-6{
+  gap: 1.5rem;
+}
+
+.gap-8{
+  gap: 2rem;
 }
 
 .gap-1{
@@ -575,6 +608,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .rounded-lg{
   border-radius: 0.5rem;
+}
+
+.border{
+  border-width: 1px;
+}
+
+.border-gray-400{
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 
 .bg-gray-200{
@@ -589,6 +631,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-2{
   padding: 0.5rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-16{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .text-center{
@@ -628,12 +680,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.opacity-0{
-  opacity: 0;
+.transition-colors{
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
-.opacity-70{
-  opacity: 0.7;
+.duration-300{
+  transition-duration: 300ms;
 }
 
 :root {
@@ -661,7 +717,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #4d4d4d;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
 }
 
 .body-margin{
@@ -700,7 +756,7 @@ body {
 }
 
 .body-bg {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
 }
 
 .link{
@@ -810,12 +866,31 @@ body {
   padding-right: 1rem;
 }
 
+@media (min-width: 1024px){
+  .menu-item{
+    margin-right: 1.5rem;
+  }
+
+  .menu-item{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .menu-item{
+    padding-left: 0px;
+  }
+
+  .menu-item{
+    padding-right: 0px;
+  }
+}
+
 .site-title-container{
   margin-left: auto;
   margin-right: auto;
   display: flex;
   height: 12rem;
-  width: 100%;
+  width: auto;
   align-items: center;
   justify-content: center;
   --tw-bg-opacity: 1;
@@ -904,6 +979,25 @@ body {
   }
 }
 
+@media (min-width: 640px){
+  .sm\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sm\:mb-0{
+    margin-bottom: 0px;
+  }
+
+  .sm\:max-w-xl{
+    max-width: 36rem;
+  }
+
+  .sm\:text-center{
+    text-align: center;
+  }
+}
+
 @media (min-width: 768px){
   .md\:flex{
     display: flex;
@@ -911,6 +1005,15 @@ body {
 
   .md\:hidden{
     display: none;
+  }
+
+  .md\:max-w-full{
+    max-width: 100%;
+  }
+
+  .md\:px-24{
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 
@@ -923,8 +1026,8 @@ body {
     order: 1;
   }
 
-  .lg\:mt-0{
-    margin-top: 0px;
+  .lg\:m-0{
+    margin: 0px;
   }
 
   .lg\:flex{
@@ -935,17 +1038,33 @@ body {
     display: none;
   }
 
-  .lg\:w-auto{
-    width: auto;
+  .lg\:max-w-screen-xl{
+    max-width: 1280px;
+  }
+
+  .lg\:max-w-2xl{
+    max-width: 42rem;
   }
 
   .lg\:flex-row{
     flex-direction: row;
   }
 
-  .lg\:space-x-8 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0;
-    margin-right: calc(2rem * var(--tw-space-x-reverse));
-    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  .lg\:justify-between{
+    justify-content: space-between;
+  }
+
+  .lg\:gap-8{
+    gap: 2rem;
+  }
+
+  .lg\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .lg\:py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }

@@ -3,3 +3,5 @@
         <p class="text-center">Copyright &copy; Twenty twenty four | Powered by Nidavel
     </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/gh/Ikennaf1/blinds@latest/dist/blinds.min.js"></script>
