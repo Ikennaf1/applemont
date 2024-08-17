@@ -1,5 +1,38 @@
 <?php
 
+function getThemeDefaults()
+{
+    $themeColor = !empty(settings('r', 'general.theme_color'))
+        ? settings('r', 'general.theme_color')
+        : '#ea883c';
+
+    $userTitle = !empty(settings('r', 'applemont.user_title'))
+        ? settings('r', 'applemont.user_title')
+        : 'Copywriter';
+
+    $tagLine = !empty(settings('r', 'applemont.tag_line'))
+        ? settings('r', 'applemont.user_bio')
+        : "My amazing blog";
+
+    $userBio = !empty(settings('r', 'applemont.user_bio'))
+        ? settings('r', 'applemont.user_bio')
+        : Auth::user()->name." is a skilled copywriter who crafts compelling stories and persuasive content.
+        With an eye for detail and deep understanding of audience motivation, he creates writings that resonate and drive results.
+        Let him help you tell your story and elevate your brand's voice.";
+    
+    $ctaText = !empty(settings('r', 'applemont.cta_text'))
+        ? settings('r', 'applemont.cta_text')
+        : 'Book me';
+
+    return [
+        'theme-color' => $themeColor,
+        'user-title' => $userTitle,
+        'user-bio' => $userBio,
+        'tag-line' => $tagLine,
+        'cta-text' => $ctaText,
+    ];
+}
+
 function themeGetSocials()
 {
     return [
@@ -31,6 +64,15 @@ function themeGetContacts()
           
         ]
     ];
+}
+
+function themeGetFeaturedPost()
+{
+    $featuredPost = !empty(settings('r', 'applemont.featured_post'))
+        ? settings('r', 'applemont.featured_post')
+        : 'recent';
+    
+    return $featuredPost;
 }
 
 registerSettingsForm('Applemont', 'applemont', front_path('pages/settings.php'));

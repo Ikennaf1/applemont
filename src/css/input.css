@@ -8,13 +8,15 @@
 :root {
     font-family: "Roboto", sans-serif;
     --primary-color: #f87060;
+    --primary-color-hover: #f87060;
     --secondary-color: #102542;
+    --secondary-color-hover: #102542;
 }
 
 * {
     scroll-behavior: smooth;
     box-sizing: border-box;
-    @apply transition duration-300;
+    @apply transition ease-in-out duration-500;
 }
 
 .rajdhani {
@@ -38,7 +40,11 @@ body {
 }
 
 .link {
-    @apply text-secondary-color font-bold hover:text-black transition duration-500;
+    @apply text-primary-color font-bold hover:text-primary-color-hover;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 1.5rem black;
 }
 
 .blinds {
@@ -54,7 +60,7 @@ body {
 }
 
 .nav-fixed-bottom * {
-    @apply opacity-50 hover:opacity-100 transition ease-in-out duration-500 cursor-pointer text-white;
+    @apply opacity-50 hover:opacity-100 cursor-pointer text-white;
 }
 
 .nav-move-top {
@@ -62,13 +68,34 @@ body {
 }
 
 .menu-item {
-    @apply block py-2 lg:py-0 pl-3 lg:pl-0 pr-4 lg:pr-0 lg:mr-6;
+    @apply block py-2 lg:py-0 pl-3 lg:pl-0 pr-4 lg:pr-0 lg:mr-6 uppercase;
 }
 
 .site-title-container {
-    @apply flex justify-center w-auto mx-auto items-center bg-white h-48;
+    @apply flex flex-col gap-2 justify-center w-auto mx-auto items-center bg-white h-48;
 }
 
 .site-title {
     @apply rajdhani tracking-wide text-6xl text-black w-full mx-auto uppercase body-margin text-center;
+}
+
+.posts-list-container {
+    grid-auto-flow: dense;
+    @apply grid gap-16 lg:grid-cols-4 sm:max-w-sm sm:mx-auto lg:max-w-full;
+}
+
+.post-card {
+    @apply overflow-hidden bg-white shadow-lg border text-center self-start;
+}
+
+.post-card-title {
+    @apply inline-block mb-3 text-2xl leading-5 text-primary-color hover:text-primary-color-hover;
+}
+
+.post-card-category {
+    @apply text-gray-600;
+}
+
+.post-card-desc {
+    @apply mb-2 text-gray-700 text-ellipsis;
 }

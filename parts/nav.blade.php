@@ -1,6 +1,7 @@
 @php
-    $menus = getMenu();
-    $socials = themeGetSocials();
+$menus = getMenu();
+$socials = themeGetSocials();
+$defaults = getThemeDefaults();
 @endphp
 
 <span id="top"></span>
@@ -27,9 +28,6 @@
                     @foreach ($menus as $menu)
                     <li class="menu-item">{!! $menu !!}</li>
                     @endforeach
-                    <li class="menu-item">kjhkjsrgb</li>
-                    <li class="menu-item">kjhkjsrgb</li>
-                    <li class="menu-item">kjhkjsrgb</li>
                 </div>
 
                 <div class="flex items-center flex-wrap gap-6 justify-start m-2  lg:m-0">
@@ -57,7 +55,8 @@
 <div class="h-16"></div>
 
 <div class="site-title-container">
-    <span class="site-title"><a href="{{ homeUrl() }}">{{ settings('r', 'general.name') }}</a></span>
+    <span class="site-title"><a href="{{ homeUrl() }}"><h1>{{ settings('r', 'general.name') }}</h1></a></span>
+    <span class="mx-auto text-center text-sm tracking-wide uppercase">{{$defaults['tag-line']}}</span>
 </div>
 
 <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
