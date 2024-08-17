@@ -22,7 +22,7 @@ $featuredPost = $featuredPost === 'recent'
     </head>
 
     <body>
-        <div class="">
+        <div class="body-bg">
             {{-- Nav --}}
             <div>
                 @include('front.parts.nav')
@@ -44,13 +44,13 @@ $featuredPost = $featuredPost === 'recent'
                                         </span>
                                     </span>
                                     <span class="text-shadow text-sm pt-4">{{date('F jS, Y', strtotime($featuredPost->updated_at))}}</span>
-                                    <span class="text-shadow"><button class="px-4 py-2 border border-white font-bold cursor-pointer text-sm uppercase">Read more</button></span>
+                                    <span class="text-shadow"><button class="px-4 py-2 border border-white font-bold cursor-pointer text-sm uppercase hover:text-black hover:bg-white">Read more</button></span>
                                 </div>
                             </div>
                         </div>
                         {{-- Post content --}}
-                        <div class="w-full">
-                            <div class="w-full">
+                        <div class="main-content">
+                            <div class="posts">
                                 <div class="posts-list-container">
                                     @foreach ($posts as $post)
                                     <div class="post-card">
@@ -76,9 +76,9 @@ $featuredPost = $featuredPost === 'recent'
                                 </div>
                             </div>
                             {{-- Sidebar --}}
-                            {{-- <div class="sidebar">
+                            <div class="sidebar">
                                 @include('front.parts.sidebar')
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                 </div>

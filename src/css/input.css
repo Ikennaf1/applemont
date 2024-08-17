@@ -7,10 +7,10 @@
 
 :root {
     font-family: "Roboto", sans-serif;
-    --primary-color: #f87060;
-    --primary-color-hover: #f87060;
-    --secondary-color: #102542;
-    --secondary-color-hover: #102542;
+    --primary-color: rgba(29, 27, 26, 1);
+    --primary-color-hover: rgba(29, 27, 26, 0.6);
+    --secondary-color: rgba(29, 27, 26, 1);
+    --secondary-color-hover: rgba(29, 27, 26, 0.6);
 }
 
 * {
@@ -79,9 +79,21 @@ body {
     @apply rajdhani tracking-wide text-6xl text-black w-full mx-auto uppercase body-margin text-center;
 }
 
+.main-content {
+    @apply w-full flex flex-col lg:flex-row lg:justify-between gap-16;
+}
+
+.posts {
+    @apply lg:w-[80%];
+}
+
 .posts-list-container {
     grid-auto-flow: dense;
-    @apply grid gap-16 lg:grid-cols-4 sm:max-w-sm sm:mx-auto lg:max-w-full;
+    @apply grid gap-16 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full;
+}
+
+.footer {
+    @apply bg-gray-200 h-32 flex items-center justify-center;
 }
 
 .post-card {
@@ -98,4 +110,48 @@ body {
 
 .post-card-desc {
     @apply mb-2 text-gray-700 text-ellipsis;
+}
+
+.post-card-cta {
+    @apply inline-flex items-center font-semibold transition-colors duration-500;
+}
+
+.single-post-container {
+    @apply w-full relative;
+}
+
+.single-post-featured-image {
+    @apply body-margin bg-cover bg-center text-center w-full overflow-hidden;
+}
+
+main article {
+    @apply bg-white relative top-0 -mt-32 p-5 sm:p-10 shadow-lg;
+}
+
+main article h1 {
+    @apply text-gray-900 font-bold text-3xl mb-2;
+}
+
+main article h3 {
+    @apply text-2xl font-bold my-5;
+}
+
+main article p {
+    @apply text-base leading-8 my-5;
+}
+
+main article p a {
+    @apply text-base leading-8 my-5;
+}
+
+main article blockquote {
+    @apply border-l-4 text-base italic leading-8 my-5 p-5 text-gray-600;
+}
+
+main article .post-keywords {
+    @apply text-xs transition duration-500 ease-in-out;
+}
+
+.sidebar {
+    @apply w-full lg:w-[20%];
 }

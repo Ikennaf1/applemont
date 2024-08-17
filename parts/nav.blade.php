@@ -9,7 +9,7 @@ $defaults = getThemeDefaults();
     <a href="#top" title="Move to top"><div class="nav-move-top">&#10224;</div></a>
 </div>
 
-<nav class="bg-black text-white h-16 fixed w-full">
+<nav class="bg-black text-white h-16 fixed w-full z-30">
     <div class="flex flex-wrap items-center justify-between h-full w-full body-margin">
         <div class="flex items-center lg:order-2">
             <button data-collapse-toggle="mobile-menu-2" type="button"

@@ -13,25 +13,25 @@
 
     <body>
         {!! startBody() !!}
-        <div class="">
+        <div class="body-bg">
             {{-- Nav --}}
             <div>
                 @include('front.parts.nav')
             </div>
 
-            <div class="flex flex-col gap-16">
+            <div class="flex flex-col gap-16 body-margin">
                 {{-- Main section --}}
-                <div class="body-margin">
-                    <div class="flex flex-wrap gap-16 justify-between mt-16">
+                <div class="main-content">
+                    <div class="flex flex-wrap gap-16 justify-between">
                         {{-- Post content --}}
-                        <div class="post-content">
+                        <div class="single-post-content">
                             @include('front.parts.post-content')
                         </div>
+                    </div>
 
-                        {{-- Sidebar --}}
-                        <div class="sidebar">
-                            @include('front.parts.sidebar')
-                        </div>
+                    {{-- Sidebar --}}
+                    <div class="sidebar">
+                        @include('front.parts.sidebar')
                     </div>
                 </div>
 

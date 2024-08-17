@@ -1,6 +1,6 @@
-<footer class="bg-gray-200 h-32 flex items-center justify-center">
+<footer class="footer">
     <div class="body-margin">
-        <p class="text-center">Copyright &copy; Twenty twenty four | Powered by Nidavel
+        <p class="text-center">Copyright &copy; Applemont | Powered by <a href="https://nidavel.com">Nidavel</a>
     </div>
 </footer>
 
