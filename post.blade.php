@@ -13,7 +13,7 @@
 
     <body>
         {!! startBody() !!}
-        <div class="body-bg">
+        <div class="body-bg flex flex-col gap-16">
             {{-- Nav --}}
             <div>
                 @include('front.parts.nav')
@@ -34,11 +34,11 @@
                         @include('front.parts.sidebar')
                     </div>
                 </div>
+            </div>
 
-                {{-- Footer --}}
-                <div>
-                    @include('front.parts.footer')
-                </div>
+            {{-- Footer --}}
+            <div>
+                @include('front.parts.footer')
             </div>
         </div>
         {!! endBody() !!}

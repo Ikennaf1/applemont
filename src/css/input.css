@@ -68,7 +68,7 @@ body {
 }
 
 .menu-item {
-    @apply block py-2 lg:py-0 pl-3 lg:pl-0 pr-4 lg:pr-0 lg:mr-6 uppercase;
+    @apply block py-2 lg:py-0 uppercase;
 }
 
 .site-title-container {
@@ -97,7 +97,7 @@ body {
 }
 
 .post-card {
-    @apply overflow-hidden bg-white shadow-lg border text-center self-start;
+    @apply overflow-hidden bg-white shadow-lg border text-center;
 }
 
 .post-card-title {
@@ -152,6 +152,18 @@ main article .post-keywords {
     @apply text-xs transition duration-500 ease-in-out;
 }
 
+.sidebar-container {
+    @apply h-auto lg:h-[80vh];
+}
+
 .sidebar {
     @apply w-full lg:w-[20%];
+}
+
+.sidebar-widget-title {
+    @apply bg-black w-full text-white uppercase text-center py-2 font-bold;
+}
+
+.sidebar-widget-body {
+    @apply flex flex-col gap-4;
 }

@@ -13,8 +13,8 @@ $contacts = themeGetContacts();
 
 <div class="w-64">
     <label class="flex flex-col gap-2">
-        <div>Bio</div>
-        <textarea class="border border-gray-400 rounded-lg w-full"name="user_bio" id="" placeholder="Short description of yourself and services"><?= settings('r', 'applemont.user_bio') ?></textarea>
+        <div>About</div>
+        <textarea class="border border-gray-400 rounded-lg w-full" name="about" id="" placeholder="Short description of yourself and services"><?= settings('r', 'applemont.user_bio') ?></textarea>
     </label>
 </div>
 

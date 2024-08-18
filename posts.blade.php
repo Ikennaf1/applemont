@@ -36,16 +36,16 @@ $featuredPost = $featuredPost === 'recent'
                         {{-- Header --}}
                         <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-32 bg-cover bg-center overflow-hidden w-full h-full"
                          style="background-image: url('{!! asset('/uploads/' . $featuredPost->featured_image) !!}')">
-                            <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+                            <div class="max-w-xl sm:mx-auto lg:max-w-2xl text-center">
                                 <div class="flex flex-col gap-4 mb-16 sm:text-center sm:mb-0 text-white">
                                     <span class="text-shadow text-xs pb-4">{{User::find($featuredPost->user_id)->name}}</span>
                                     <span class="text-shadow font-bold">
-                                        <span class="border-t border-b border-white w-auto py-4 tracking-wide">
+                                        <span class="border-t border-b border-white w-auto py-4 tracking-wide px-4">
                                             {{$featuredPost->title}}
                                         </span>
                                     </span>
                                     <span class="text-shadow text-sm pt-4">{{date('F jS, Y', strtotime($featuredPost->updated_at))}}</span>
-                                    <span class="text-shadow"><button class="px-4 py-2 border border-white font-bold cursor-pointer text-sm uppercase hover:text-black hover:bg-white">Read more</button></span>
+                                    <span class="text-shadow"><a role="button" href="{{ exportLink("/posts/$featuredPost->link") }}" class="px-4 py-2 border border-white font-bold cursor-pointer text-sm uppercase hover:text-black hover:bg-white">Read more</a></span>
                                 </div>
                             </div>
                         </div>
