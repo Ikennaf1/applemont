@@ -30,6 +30,7 @@ $contacts = themeGetContacts();
         <div>Featured post</div>
         <select class="border border-gray-400 rounded-lg w-full" name="featured_post">
             <?php
+            $selectPost = '';
             if (empty(settings('r', 'applemont.featured_post'))) {
                 $selectPost = 'selected';
             }
