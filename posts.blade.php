@@ -1,10 +1,11 @@
 <?php
 use App\Models\User;
+use App\Models\Post;
 exportAssets();
 $featuredPost = themeGetFeaturedPost();
 $featuredPost = $featuredPost === 'recent'
-    ? $posts[count($posts) - 1]
-    : $posts[$featuredPost];
+    ? $posts[0]
+    : Post::find($featuredPost);
 ?>
 
 <!DOCTYPE html>

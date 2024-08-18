@@ -35,6 +35,7 @@ $contacts = themeGetContacts();
             }
             ?>
             <option <?=$selectPost?> disabled>Select post</option>
+            <option value="recent">Recent post</option>
             <?php
             $posts = Post::where('status', 'published')->latest()->get();
             foreach ($posts as $post) {
