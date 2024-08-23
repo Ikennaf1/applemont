@@ -68,7 +68,7 @@ body {
 }
 
 .menu-item {
-    @apply block py-2 lg:py-0 uppercase;
+    @apply block py-2 lg:py-0 lg:mr-6 uppercase;
 }
 
 .site-title-container {

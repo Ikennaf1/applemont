@@ -31,7 +31,7 @@ $defaults = getThemeDefaults();
                     @endforeach
                 </div>
 
-                <div class="flex items-center flex-wrap gap-6 justify-start mx-auto  lg:m-0">
+                <div class="flex items-center flex-wrap gap-6 justify-start mx-auto lg:m-0">
                     <li>
                         <div class="menu-item blinds" id="blinds_id"></div>
                     </li>
@@ -56,7 +56,7 @@ $defaults = getThemeDefaults();
 <div class="h-16"></div>
 
 <div class="site-title-container">
-    <span class="site-title"><a href="{{ homeUrl() }}"><h1>{{ settings('r', 'general.name') }}</h1></a></span>
+    <span class="site-title"><h1><a href="{{ homeUrl() }}">{{ settings('r', 'general.name') }}</a></h1></span>
     <span class="mx-auto text-center text-sm tracking-wide uppercase">{{$defaults['tag-line']}}</span>
 </div>
 
