@@ -1,7 +1,7 @@
 <?php
 use App\Models\User;
 use App\Models\Post;
-exportAssets();
+// exportAssets();
 $featuredPost = themeGetFeaturedPost();
 $featuredPost = $featuredPost === 'recent'
     ? $posts[0]
