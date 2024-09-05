@@ -2,10 +2,20 @@
 use App\Models\User;
 use App\Models\Post;
 // exportAssets();
-$featuredPost = themeGetFeaturedPost();
-$featuredPost = $featuredPost === 'recent'
-    ? $posts[0]
-    : Post::find($featuredPost);
+if (count($posts) > 0) {
+    $featuredPost = themeGetFeaturedPost();
+    $featuredPost = $featuredPost === 'recent'
+        ? $posts[0]
+        : Post::find($featuredPost);
+} else {
+    $featuredPost = (object) [
+        "featured_image" => "",
+        "user_id" => 1,
+        "title" => "",
+        "updated_at" => "",
+        "link" => ""
+    ];
+}
 ?>
 
 <!DOCTYPE html>

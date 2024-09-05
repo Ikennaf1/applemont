@@ -16,7 +16,7 @@ function getThemeDefaults()
 
     $about = !empty(settings('r', 'applemont.about'))
         ? settings('r', 'applemont.about')
-        : Auth::user()->name." is a skilled copywriter who crafts compelling stories and persuasive content.
+        : "I am skilled copywriter who crafts compelling stories and persuasive content.
         With an eye for detail and deep understanding of audience motivation.";
     
     $ctaText = !empty(settings('r', 'applemont.cta_text'))
